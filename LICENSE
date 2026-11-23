@@ -199,3 +199,470 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Awi Akbar Jaelani</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1425;
+  color: #fff;
+}
+
+header {
+  background: #101d35;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #39a9ff;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #39a9ff;
+}
+
+.hero {
+  min-height: 570px;
+  padding: 80px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: linear-gradient(120deg,#0b1425,#173d63);
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero small {
+  color: #39a9ff;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.hero h1 span {
+  color: #39a9ff;
+}
+
+.hero p {
+  color: #bdcce0;
+  line-height: 1.8;
+}
+
+.profile {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #39a9ff;
+  background: #173d63;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  background: #39a9ff;
+  color: #071629;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+section {
+  padding: 75px 10%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading h2 {
+  font-size: 32px;
+  color: #39a9ff;
+  margin-bottom: 10px;
+}
+
+.heading p {
+  color: #aabbd1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 22px;
+}
+
+.card {
+  background: #14243d;
+  border: 1px solid #263d5b;
+  border-radius: 14px;
+  padding: 25px;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #39a9ff;
+}
+
+.card h3 {
+  color: #39a9ff;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #bdcce0;
+  line-height: 1.8;
+}
+
+.info p {
+  padding: 9px 0;
+  border-bottom: 1px solid #263d5b;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  background: #193e62;
+  border: 1px solid #39a9ff;
+  padding: 11px 17px;
+  border-radius: 8px;
+  color: #d9efff;
+}
+
+.project {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.contact {
+  text-align: center;
+  background: #101d35;
+}
+
+.contact h2 {
+  color: #39a9ff;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #bdcce0;
+  margin: 10px;
+}
+
+footer {
+  background: #071020;
+  text-align: center;
+  padding: 23px;
+  color: #9aabc0;
+  font-size: 13px;
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+@media(max-width:750px) {
+  header {
+    padding: 18px 6%;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #101d35;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 65px 7%;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .profile {
+    width: 175px;
+    height: 175px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 55px 7%;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  header, .contact, footer, .btn {
+    display: none;
+  }
+
+  .hero {
+    background: white;
+    color: black;
+    min-height: auto;
+  }
+
+  .hero p, .card p {
+    color: #333;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid #ccc;
+  }
+
+  .card h3, .heading h2 {
+    color: #174b79;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">AWI JAELANI.</div>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+
+  <nav id="navigation">
+    <a href="#home">Home</a>
+    <a href="#about">Profil</a>
+    <a href="#education">Pendidikan</a>
+    <a href="#skills">Keahlian</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="hero-content">
+    <small>PERSONAL CURRICULUM VITAE</small>
+
+    <h1>Halo, Saya <span>Awi Akbar Jaelani</span></h1>
+
+    <p>
+      Saya adalah siswa Teknik Komputer dan Jaringan
+      (TKJ) yang memiliki minat dalam dunia teknologi,
+      komputer, jaringan, dan pengembangan website.
+    </p>
+
+    <a href="#about" class="btn">Kenali Saya</a>
+    <button onclick="window.print()" class="btn">
+      Download CV PDF
+    </button>
+  </div>
+
+  <img class="profile"
+  src="https://placehold.co/400x400/173d63/ffffff?text=AWI"
+  alt="Foto Awi">
+</div>
+
+<section id="about">
+  <div class="heading">
+    <h2>Tentang Saya</h2>
+    <p>Informasi dan biodata pribadi.</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h3>Profil Singkat</h3>
+      <p>
+        Saya merupakan pelajar SMK Karya Guna 2 Bekasi
+        jurusan Teknik Komputer dan Jaringan.
+        Saya tertarik mempelajari teknologi informasi
+        dan ingin terus meningkatkan kemampuan
+        di bidang komputer dan jaringan.
+      </p>
+    </div>
+
+    <div class="card info">
+      <h3>Biodata</h3>
+      <p>Nama: Awi Akbar Jaelani</p>
+      <p>Tempat lahir: Bekasi</p>
+      <p>Tanggal lahir: 6 Mei 2009</p>
+      <p>Alamat: Bekasi, Jawa Barat</p>
+      <p>Sekolah: SMK Karya Guna 2 Bekasi</p>
+      <p>Jurusan: Teknik Komputer dan Jaringan</p>
+      <p>Email: barjae06@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="heading">
+    <h2>Pendidikan</h2>
+    <p>Riwayat pendidikan saya.</p>
+  </div>
+
+  <div class="card">
+    <h3>SMK Karya Guna 2 Bekasi</h3>
+    <p>Jurusan Teknik Komputer dan Jaringan (TKJ).</p>
+    <p>Mempelajari komputer, perangkat jaringan,
+    konfigurasi jaringan, dan teknologi informasi.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="heading">
+    <h2>Keahlian</h2>
+    <p>Kemampuan yang saya pelajari.</p>
+  </div>
+
+  <div class="card">
+    <div class="skills">
+      <span>Komputer Dasar</span>
+      <span>Microsoft Office</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>Jaringan Komputer</span>
+      <span>Instalasi Sistem Operasi</span>
+      <span>Troubleshooting Dasar</span>
+      <span>Konfigurasi Jaringan Dasar</span>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="heading">
+    <h2>Portfolio</h2>
+    <p>Bidang proyek pembelajaran.</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <div class="project">🌐</div>
+      <h3>Website CV Pribadi</h3>
+      <p>
+        Membuat website portofolio menggunakan
+        HTML dan CSS sebagai media memperkenalkan
+        profil pribadi.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="project">🖥️</div>
+      <h3>Jaringan Komputer</h3>
+      <p>
+        Mempelajari konfigurasi IP address,
+        gateway, dan dasar administrasi
+        jaringan komputer.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Hubungi Saya</h2>
+  <p>Terima kasih telah mengunjungi website CV saya.</p>
+  <p>Email: barjae06@gmail.com</p>
+
+  <a href="mailto:barjae06@gmail.com" class="btn">
+    Kirim Email
+  </a>
+</section>
+
+<footer>
+  © 2026 Awi Akbar Jaelani | Personal CV Website
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navigation")
+    .classList.toggle("show");
+}
+
+document.querySelectorAll("#navigation a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navigation")
+      .classList.remove("show");
+  });
+});
+</script>
+
+</body>
+</html>
